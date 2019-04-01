@@ -4,3 +4,5 @@ pluginManagement {
 	}
 }
 rootProject.name = 'localenv'
+include ':sabubase'
+project(':sabubase').projectDir = new File(settingsDir, '../sabubase')

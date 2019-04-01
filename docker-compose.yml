@@ -41,9 +41,8 @@ services:
     image: localenv:0.0.1-SNAPSHOT
     ports:
       - "8082:8082"
-    links:
-      - kafka
     depends_on:
       - kafka
     environment:
-      SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS: "kafka:9092"
+      SPRING_KAFKA_CONSUMER_BOOTSTRAP_SERVERS: kafka:19092
+      SPRING_KAFKA_PRODUCER_BOOTSTRAP_SERVERS: kafka:19092
