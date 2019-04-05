@@ -1,7 +1,7 @@
 package com.example.demo.Services;
 
-import com.athenahealth.Measure;
-import com.athenahealth.
+import com.athenahealth.schema.Measure;
+import com.athenahealth.sabubase.models.Person;
 import org.apache.avro.specific.SpecificRecord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,12 +21,9 @@ public class Producer {
 
     public void sendMessage(String message) {
         logger.info(String.format("#### -> Produced message -> %s", message));
-
-        Measure measure = Measure.newBuilder()
-                .setTest(message)
-                .setId(count++)
-                .build();
-
+        Person per = new Person("Nidhi", 22);
+        Measure measure = Measure.newBuilder().setTest(message).setId(count++).build();
         this.kafkaTemplate.send(TOPIC, measure);
+
     }
 }

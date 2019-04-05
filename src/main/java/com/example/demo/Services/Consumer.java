@@ -1,6 +1,6 @@
 package com.example.demo.Services;
 
-import com.athenahealth.Measure;
+import com.athenahealth.schema.Measure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;

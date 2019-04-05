@@ -1,6 +1,10 @@
 buildscript {
 	repositories {
 		mavenCentral()
+//		maven {
+//			name "Confluent"
+//			url "http://packages.confluent.io/maven/"
+//		}
 	}
 	dependencies {
 	}
