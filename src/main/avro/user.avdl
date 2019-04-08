@@ -1,8 +1,0 @@
-@namespace("com.example.demo")
-protocol EventInterface {
-
-  record eventß {
-    long id;
-    string test;
-  }
-}
